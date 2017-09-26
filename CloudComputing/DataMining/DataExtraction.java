@@ -11,7 +11,7 @@ public class DataExtraction {
 
 	public static void main(String[] args) {
 		
-		String fileName = "/2016 MS FALL/Courses/CSE5334 Data Mining/Assignments/UniversityDataSet/university.data.txt";
+		String fileName = "/Input.txt";
 		 // This will reference one line at a time
         String line = null;
 
