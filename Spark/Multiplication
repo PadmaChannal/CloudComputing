@@ -1,0 +1,54 @@
+package edu.uta.cse6331
+
+import org.apache.spark.SparkContext
+import org.apache.spark.SparkConf
+import org.apache.spark.SparkContext._
+
+
+object MultiplySpark {
+	def main(args: Array[ String ]) {
+		val conf = new SparkConf().setAppName("Multiply")
+		conf.setMaster("local[2]")
+    	val sc = new SparkContext(conf)
+
+    	val M = sc.textFile(args(0)).flatMap(entry => {
+      	val rec = entry.split(",")
+      	val row = rec(0).toInt
+      	val column = rec(1).toInt
+      	val value = rec(2).toDouble
+      	
+      	for {pointer <-1 until rec.length} yield ((row,column),value)
+    	})
+    	
+    	 	val N = sc.textFile(args(0)).flatMap(entry => {
+      	val rec = entry.split(",")
+      	val row = rec(0).toInt
+      	val column = rec(1).toInt
+      	val value = rec(2).toDouble
+      	
+      	for {pointer <-1 until rec.length} yield ((row,column),value)
+    	})
+		
+    	
+//    	 val Mmap = M.map( e => (e._2,e))
+//    	 val Nmap = N.map( d => (d._2,d))
+//    	 
+//    	 val MNjoin = Mmap.join(Nmap).map{ case (k,(e,d)) => e._2.toDouble+","+d._2.toDouble }
+//    	 
+    	
+    	 
+		
+		val result = MNjoin.reduceByKey( (a,b) => a*b)
+      .map(entry => {
+        ((entry._1._1, entry._1._2), entry._2)
+      })
+      .reduceByKey((a, b) => a + b)
+      
+      result.saveAsTextFile(args(2))
+      sc.stop()
+	}
+
+}
+
+
+
