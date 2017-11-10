@@ -1,0 +1,68 @@
+package edu.uta.cse6331
+
+import org.apache.spark.SparkContext
+import org.apache.spark.SparkConf
+import org.apache.spark.SparkContext._
+
+
+object Source {
+  
+ 
+	def main(args: Array[ String ]) {
+	  
+	  
+	val conf = new SparkConf().setAppName("Multiply")
+		
+    val sc = new SparkContext(conf)
+		
+    val M = sc.textFile(args(0)).map( line => { val a = line.split(",")
+                                                (a(0).toLong,a(1).toLong,a(2).toLong) } )
+                                                
+                                          
+    val N = sc.textFile(args(0)).map( line => { val a = line.split(",")
+    	 	                                          (a(0).toLong,Long.MaxValue) } )
+    	 	                                         
+   val map1=N.collectAsMap()
+       
+    var mutMap = collection.mutable.Map() ++ map1
+    
+     mutMap.foreach {case (key, value) => 
+       if(key==0) 
+         {
+           mutMap-=key;
+           mutMap(key)=0;
+         }}
+  
+    
+    
+   
+    var i=0;
+    while(i<4){
+      
+    M.collect().foreach(M=>(
+        if(mutMap(M._1)!=Long.MaxValue){
+          
+          if( mutMap(M._3) > (mutMap(M._1)+M._2)){
+            
+           mutMap-=M._3;
+           mutMap(M._3) = (mutMap(M._1)+M._2);
+        
+          }
+        }
+     ))
+     i+=1;
+	}//while
+    
+     val sorted=mutMap.toSeq.sortBy(mutMap=>mutMap._1)
+     
+     sorted.foreach {case (key, value) => println (key + "-->" + value)}
+    
+     sc.parallelize(mutMap.toSeq).saveAsTextFile(args(1))
+    
+     sc.stop()
+
+
+	}
+
+}
+
