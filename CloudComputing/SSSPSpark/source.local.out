@@ -1,0 +1,194 @@
+Using Spark's default log4j profile: org/apache/spark/log4j-defaults.properties
+17/11/09 12:52:05 INFO SparkContext: Running Spark version 1.5.2
+17/11/09 12:52:06 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+17/11/09 12:52:06 INFO SecurityManager: Changing view acls to: pchannal
+17/11/09 12:52:06 INFO SecurityManager: Changing modify acls to: pchannal
+17/11/09 12:52:06 INFO SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users with view permissions: Set(pchannal); users with modify permissions: Set(pchannal)
+17/11/09 12:52:07 INFO Slf4jLogger: Slf4jLogger started
+17/11/09 12:52:07 INFO Remoting: Starting remoting
+17/11/09 12:52:07 INFO Remoting: Remoting started; listening on addresses :[akka.tcp://sparkDriver@198.202.114.48:43489]
+17/11/09 12:52:07 INFO Utils: Successfully started service 'sparkDriver' on port 43489.
+17/11/09 12:52:07 INFO SparkEnv: Registering MapOutputTracker
+17/11/09 12:52:07 INFO SparkEnv: Registering BlockManagerMaster
+17/11/09 12:52:07 INFO DiskBlockManager: Created local directory at /tmp/blockmgr-fb573d3f-cbae-4c95-857c-d37fce359b69
+17/11/09 12:52:07 INFO MemoryStore: MemoryStore started with capacity 530.0 MB
+17/11/09 12:52:07 INFO HttpFileServer: HTTP File server directory is /tmp/spark-02c09900-573d-4263-b7e9-6ed9702b77fc/httpd-f8519f5d-8628-4eb7-bebf-dfda9fa50342
+17/11/09 12:52:07 INFO HttpServer: Starting HTTP Server
+17/11/09 12:52:07 INFO Utils: Successfully started service 'HTTP file server' on port 39977.
+17/11/09 12:52:07 INFO SparkEnv: Registering OutputCommitCoordinator
+17/11/09 12:52:08 INFO Utils: Successfully started service 'SparkUI' on port 4040.
+17/11/09 12:52:08 INFO SparkUI: Started SparkUI at http://198.202.114.48:4040
+17/11/09 12:52:08 INFO SparkContext: Added JAR file:/home/pchannal/project4/source.jar at http://198.202.114.48:39977/jars/source.jar with timestamp 1510260728234
+17/11/09 12:52:08 WARN MetricsSystem: Using default name DAGScheduler for source because spark.app.id is not set.
+17/11/09 12:52:08 INFO Executor: Starting executor ID driver on host localhost
+17/11/09 12:52:08 INFO Utils: Successfully started service 'org.apache.spark.network.netty.NettyBlockTransferService' on port 36666.
+17/11/09 12:52:08 INFO NettyBlockTransferService: Server created on 36666
+17/11/09 12:52:08 INFO BlockManagerMaster: Trying to register BlockManager
+17/11/09 12:52:08 INFO BlockManagerMasterEndpoint: Registering block manager localhost:36666 with 530.0 MB RAM, BlockManagerId(driver, localhost, 36666)
+17/11/09 12:52:08 INFO BlockManagerMaster: Registered BlockManager
+17/11/09 12:52:09 INFO MemoryStore: ensureFreeSpace(120040) called with curMem=0, maxMem=555755765
+17/11/09 12:52:09 INFO MemoryStore: Block broadcast_0 stored as values in memory (estimated size 117.2 KB, free 529.9 MB)
+17/11/09 12:52:10 INFO MemoryStore: ensureFreeSpace(12673) called with curMem=120040, maxMem=555755765
+17/11/09 12:52:10 INFO MemoryStore: Block broadcast_0_piece0 stored as bytes in memory (estimated size 12.4 KB, free 529.9 MB)
+17/11/09 12:52:10 INFO BlockManagerInfo: Added broadcast_0_piece0 in memory on localhost:36666 (size: 12.4 KB, free: 530.0 MB)
+17/11/09 12:52:10 INFO SparkContext: Created broadcast 0 from textFile at Source.scala:22
+17/11/09 12:52:10 INFO FileInputFormat: Total input paths to process : 1
+17/11/09 12:52:10 INFO SparkContext: Starting job: collect at Source.scala:49
+17/11/09 12:52:10 INFO DAGScheduler: Got job 0 (collect at Source.scala:49) with 2 output partitions
+17/11/09 12:52:10 INFO DAGScheduler: Final stage: ResultStage 0(collect at Source.scala:49)
+17/11/09 12:52:10 INFO DAGScheduler: Parents of final stage: List()
+17/11/09 12:52:10 INFO DAGScheduler: Missing parents: List()
+17/11/09 12:52:10 INFO DAGScheduler: Submitting ResultStage 0 (MapPartitionsRDD[2] at map at Source.scala:22), which has no missing parents
+17/11/09 12:52:10 INFO MemoryStore: ensureFreeSpace(3296) called with curMem=132713, maxMem=555755765
+17/11/09 12:52:10 INFO MemoryStore: Block broadcast_1 stored as values in memory (estimated size 3.2 KB, free 529.9 MB)
+17/11/09 12:52:10 INFO MemoryStore: ensureFreeSpace(1908) called with curMem=136009, maxMem=555755765
+17/11/09 12:52:10 INFO MemoryStore: Block broadcast_1_piece0 stored as bytes in memory (estimated size 1908.0 B, free 529.9 MB)
+17/11/09 12:52:10 INFO BlockManagerInfo: Added broadcast_1_piece0 in memory on localhost:36666 (size: 1908.0 B, free: 530.0 MB)
+17/11/09 12:52:10 INFO SparkContext: Created broadcast 1 from broadcast at DAGScheduler.scala:861
+17/11/09 12:52:10 INFO DAGScheduler: Submitting 2 missing tasks from ResultStage 0 (MapPartitionsRDD[2] at map at Source.scala:22)
+17/11/09 12:52:10 INFO TaskSchedulerImpl: Adding task set 0.0 with 2 tasks
+17/11/09 12:52:10 INFO TaskSetManager: Starting task 0.0 in stage 0.0 (TID 0, localhost, PROCESS_LOCAL, 2206 bytes)
+17/11/09 12:52:10 INFO TaskSetManager: Starting task 1.0 in stage 0.0 (TID 1, localhost, PROCESS_LOCAL, 2206 bytes)
+17/11/09 12:52:10 INFO Executor: Running task 0.0 in stage 0.0 (TID 0)
+17/11/09 12:52:10 INFO Executor: Fetching http://198.202.114.48:39977/jars/source.jar with timestamp 1510260728234
+17/11/09 12:52:10 INFO Executor: Running task 1.0 in stage 0.0 (TID 1)
+17/11/09 12:52:10 INFO Utils: Fetching http://198.202.114.48:39977/jars/source.jar to /tmp/spark-02c09900-573d-4263-b7e9-6ed9702b77fc/userFiles-acbb0b6f-5f98-49ed-9d98-b2fe612909e8/fetchFileTemp5478776024012409449.tmp
+17/11/09 12:52:10 INFO Executor: Adding file:/tmp/spark-02c09900-573d-4263-b7e9-6ed9702b77fc/userFiles-acbb0b6f-5f98-49ed-9d98-b2fe612909e8/source.jar to class loader
+17/11/09 12:52:10 INFO HadoopRDD: Input split: file:/home/pchannal/project4/small-graph.txt:24+24
+17/11/09 12:52:10 INFO deprecation: mapred.tip.id is deprecated. Instead, use mapreduce.task.id
+17/11/09 12:52:10 INFO deprecation: mapred.task.id is deprecated. Instead, use mapreduce.task.attempt.id
+17/11/09 12:52:10 INFO deprecation: mapred.task.is.map is deprecated. Instead, use mapreduce.task.ismap
+17/11/09 12:52:10 INFO deprecation: mapred.task.partition is deprecated. Instead, use mapreduce.task.partition
+17/11/09 12:52:10 INFO deprecation: mapred.job.id is deprecated. Instead, use mapreduce.job.id
+17/11/09 12:52:10 INFO HadoopRDD: Input split: file:/home/pchannal/project4/small-graph.txt:0+24
+17/11/09 12:52:10 INFO Executor: Finished task 1.0 in stage 0.0 (TID 1). 2267 bytes result sent to driver
+17/11/09 12:52:10 INFO Executor: Finished task 0.0 in stage 0.0 (TID 0). 2314 bytes result sent to driver
+17/11/09 12:52:10 INFO TaskSetManager: Finished task 1.0 in stage 0.0 (TID 1) in 244 ms on localhost (1/2)
+17/11/09 12:52:10 INFO TaskSetManager: Finished task 0.0 in stage 0.0 (TID 0) in 338 ms on localhost (2/2)
+17/11/09 12:52:10 INFO DAGScheduler: ResultStage 0 (collect at Source.scala:49) finished in 0.345 s
+17/11/09 12:52:10 INFO TaskSchedulerImpl: Removed TaskSet 0.0, whose tasks have all completed, from pool 
+17/11/09 12:52:10 INFO DAGScheduler: Job 0 finished: collect at Source.scala:49, took 0.426103 s
+17/11/09 12:52:10 INFO SparkContext: Starting job: collect at Source.scala:49
+17/11/09 12:52:10 INFO DAGScheduler: Got job 1 (collect at Source.scala:49) with 2 output partitions
+17/11/09 12:52:10 INFO DAGScheduler: Final stage: ResultStage 1(collect at Source.scala:49)
+17/11/09 12:52:10 INFO DAGScheduler: Parents of final stage: List()
+17/11/09 12:52:10 INFO DAGScheduler: Missing parents: List()
+17/11/09 12:52:10 INFO DAGScheduler: Submitting ResultStage 1 (MapPartitionsRDD[2] at map at Source.scala:22), which has no missing parents
+17/11/09 12:52:10 INFO MemoryStore: ensureFreeSpace(3296) called with curMem=137917, maxMem=555755765
+17/11/09 12:52:10 INFO MemoryStore: Block broadcast_2 stored as values in memory (estimated size 3.2 KB, free 529.9 MB)
+17/11/09 12:52:10 INFO MemoryStore: ensureFreeSpace(1908) called with curMem=141213, maxMem=555755765
+17/11/09 12:52:10 INFO MemoryStore: Block broadcast_2_piece0 stored as bytes in memory (estimated size 1908.0 B, free 529.9 MB)
+17/11/09 12:52:10 INFO BlockManagerInfo: Added broadcast_2_piece0 in memory on localhost:36666 (size: 1908.0 B, free: 530.0 MB)
+17/11/09 12:52:10 INFO SparkContext: Created broadcast 2 from broadcast at DAGScheduler.scala:861
+17/11/09 12:52:10 INFO DAGScheduler: Submitting 2 missing tasks from ResultStage 1 (MapPartitionsRDD[2] at map at Source.scala:22)
+17/11/09 12:52:10 INFO TaskSchedulerImpl: Adding task set 1.0 with 2 tasks
+17/11/09 12:52:10 INFO TaskSetManager: Starting task 0.0 in stage 1.0 (TID 2, localhost, PROCESS_LOCAL, 2206 bytes)
+17/11/09 12:52:10 INFO TaskSetManager: Starting task 1.0 in stage 1.0 (TID 3, localhost, PROCESS_LOCAL, 2206 bytes)
+17/11/09 12:52:10 INFO Executor: Running task 0.0 in stage 1.0 (TID 2)
+17/11/09 12:52:10 INFO HadoopRDD: Input split: file:/home/pchannal/project4/small-graph.txt:0+24
+17/11/09 12:52:10 INFO Executor: Running task 1.0 in stage 1.0 (TID 3)
+17/11/09 12:52:10 INFO Executor: Finished task 0.0 in stage 1.0 (TID 2). 2314 bytes result sent to driver
+17/11/09 12:52:10 INFO TaskSetManager: Finished task 0.0 in stage 1.0 (TID 2) in 23 ms on localhost (1/2)
+17/11/09 12:52:10 INFO HadoopRDD: Input split: file:/home/pchannal/project4/small-graph.txt:24+24
+17/11/09 12:52:10 INFO Executor: Finished task 1.0 in stage 1.0 (TID 3). 2267 bytes result sent to driver
+17/11/09 12:52:10 INFO DAGScheduler: ResultStage 1 (collect at Source.scala:49) finished in 0.036 s
+17/11/09 12:52:10 INFO DAGScheduler: Job 1 finished: collect at Source.scala:49, took 0.047416 s
+17/11/09 12:52:10 INFO TaskSetManager: Finished task 1.0 in stage 1.0 (TID 3) in 34 ms on localhost (2/2)
+17/11/09 12:52:10 INFO TaskSchedulerImpl: Removed TaskSet 1.0, whose tasks have all completed, from pool 
+17/11/09 12:52:10 INFO SparkContext: Starting job: collect at Source.scala:49
+17/11/09 12:52:10 INFO DAGScheduler: Got job 2 (collect at Source.scala:49) with 2 output partitions
+17/11/09 12:52:10 INFO DAGScheduler: Final stage: ResultStage 2(collect at Source.scala:49)
+17/11/09 12:52:10 INFO DAGScheduler: Parents of final stage: List()
+17/11/09 12:52:10 INFO DAGScheduler: Missing parents: List()
+17/11/09 12:52:10 INFO DAGScheduler: Submitting ResultStage 2 (MapPartitionsRDD[2] at map at Source.scala:22), which has no missing parents
+17/11/09 12:52:10 INFO MemoryStore: ensureFreeSpace(3296) called with curMem=143121, maxMem=555755765
+17/11/09 12:52:10 INFO MemoryStore: Block broadcast_3 stored as values in memory (estimated size 3.2 KB, free 529.9 MB)
+17/11/09 12:52:10 INFO MemoryStore: ensureFreeSpace(1908) called with curMem=146417, maxMem=555755765
+17/11/09 12:52:10 INFO MemoryStore: Block broadcast_3_piece0 stored as bytes in memory (estimated size 1908.0 B, free 529.9 MB)
+17/11/09 12:52:10 INFO BlockManagerInfo: Added broadcast_3_piece0 in memory on localhost:36666 (size: 1908.0 B, free: 530.0 MB)
+17/11/09 12:52:10 INFO SparkContext: Created broadcast 3 from broadcast at DAGScheduler.scala:861
+17/11/09 12:52:10 INFO DAGScheduler: Submitting 2 missing tasks from ResultStage 2 (MapPartitionsRDD[2] at map at Source.scala:22)
+17/11/09 12:52:10 INFO TaskSchedulerImpl: Adding task set 2.0 with 2 tasks
+17/11/09 12:52:10 INFO TaskSetManager: Starting task 0.0 in stage 2.0 (TID 4, localhost, PROCESS_LOCAL, 2206 bytes)
+17/11/09 12:52:10 INFO TaskSetManager: Starting task 1.0 in stage 2.0 (TID 5, localhost, PROCESS_LOCAL, 2206 bytes)
+17/11/09 12:52:10 INFO Executor: Running task 0.0 in stage 2.0 (TID 4)
+17/11/09 12:52:10 INFO Executor: Running task 1.0 in stage 2.0 (TID 5)
+17/11/09 12:52:10 INFO HadoopRDD: Input split: file:/home/pchannal/project4/small-graph.txt:0+24
+17/11/09 12:52:10 INFO HadoopRDD: Input split: file:/home/pchannal/project4/small-graph.txt:24+24
+17/11/09 12:52:10 INFO Executor: Finished task 1.0 in stage 2.0 (TID 5). 2267 bytes result sent to driver
+17/11/09 12:52:10 INFO TaskSetManager: Finished task 1.0 in stage 2.0 (TID 5) in 10 ms on localhost (1/2)
+17/11/09 12:52:10 INFO Executor: Finished task 0.0 in stage 2.0 (TID 4). 2314 bytes result sent to driver
+17/11/09 12:52:10 INFO TaskSetManager: Finished task 0.0 in stage 2.0 (TID 4) in 35 ms on localhost (2/2)
+17/11/09 12:52:10 INFO TaskSchedulerImpl: Removed TaskSet 2.0, whose tasks have all completed, from pool 
+17/11/09 12:52:10 INFO DAGScheduler: ResultStage 2 (collect at Source.scala:49) finished in 0.033 s
+17/11/09 12:52:10 INFO DAGScheduler: Job 2 finished: collect at Source.scala:49, took 0.042934 s
+17/11/09 12:52:10 INFO SparkContext: Starting job: collect at Source.scala:49
+17/11/09 12:52:10 INFO DAGScheduler: Got job 3 (collect at Source.scala:49) with 2 output partitions
+17/11/09 12:52:10 INFO DAGScheduler: Final stage: ResultStage 3(collect at Source.scala:49)
+17/11/09 12:52:10 INFO DAGScheduler: Parents of final stage: List()
+17/11/09 12:52:10 INFO DAGScheduler: Missing parents: List()
+17/11/09 12:52:10 INFO DAGScheduler: Submitting ResultStage 3 (MapPartitionsRDD[2] at map at Source.scala:22), which has no missing parents
+17/11/09 12:52:10 INFO MemoryStore: ensureFreeSpace(3296) called with curMem=148325, maxMem=555755765
+17/11/09 12:52:10 INFO MemoryStore: Block broadcast_4 stored as values in memory (estimated size 3.2 KB, free 529.9 MB)
+17/11/09 12:52:10 INFO MemoryStore: ensureFreeSpace(1908) called with curMem=151621, maxMem=555755765
+17/11/09 12:52:10 INFO MemoryStore: Block broadcast_4_piece0 stored as bytes in memory (estimated size 1908.0 B, free 529.9 MB)
+17/11/09 12:52:10 INFO BlockManagerInfo: Added broadcast_4_piece0 in memory on localhost:36666 (size: 1908.0 B, free: 530.0 MB)
+17/11/09 12:52:10 INFO SparkContext: Created broadcast 4 from broadcast at DAGScheduler.scala:861
+17/11/09 12:52:10 INFO DAGScheduler: Submitting 2 missing tasks from ResultStage 3 (MapPartitionsRDD[2] at map at Source.scala:22)
+17/11/09 12:52:10 INFO TaskSchedulerImpl: Adding task set 3.0 with 2 tasks
+17/11/09 12:52:10 INFO TaskSetManager: Starting task 0.0 in stage 3.0 (TID 6, localhost, PROCESS_LOCAL, 2206 bytes)
+17/11/09 12:52:10 INFO TaskSetManager: Starting task 1.0 in stage 3.0 (TID 7, localhost, PROCESS_LOCAL, 2206 bytes)
+17/11/09 12:52:10 INFO Executor: Running task 1.0 in stage 3.0 (TID 7)
+17/11/09 12:52:10 INFO Executor: Running task 0.0 in stage 3.0 (TID 6)
+17/11/09 12:52:10 INFO HadoopRDD: Input split: file:/home/pchannal/project4/small-graph.txt:24+24
+17/11/09 12:52:10 INFO HadoopRDD: Input split: file:/home/pchannal/project4/small-graph.txt:0+24
+17/11/09 12:52:10 INFO Executor: Finished task 1.0 in stage 3.0 (TID 7). 2267 bytes result sent to driver
+17/11/09 12:52:10 INFO TaskSetManager: Finished task 1.0 in stage 3.0 (TID 7) in 8 ms on localhost (1/2)
+17/11/09 12:52:10 INFO Executor: Finished task 0.0 in stage 3.0 (TID 6). 2314 bytes result sent to driver
+17/11/09 12:52:10 INFO TaskSetManager: Finished task 0.0 in stage 3.0 (TID 6) in 12 ms on localhost (2/2)
+17/11/09 12:52:10 INFO TaskSchedulerImpl: Removed TaskSet 3.0, whose tasks have all completed, from pool 
+17/11/09 12:52:10 INFO DAGScheduler: ResultStage 3 (collect at Source.scala:49) finished in 0.008 s
+17/11/09 12:52:10 INFO DAGScheduler: Job 3 finished: collect at Source.scala:49, took 0.026080 s
+0 0
+1 2
+2 3
+3 5
+17/11/09 12:52:11 INFO SparkContext: Starting job: saveAsTextFile at Source.scala:63
+17/11/09 12:52:11 INFO DAGScheduler: Got job 4 (saveAsTextFile at Source.scala:63) with 2 output partitions
+17/11/09 12:52:11 INFO DAGScheduler: Final stage: ResultStage 4(saveAsTextFile at Source.scala:63)
+17/11/09 12:52:11 INFO DAGScheduler: Parents of final stage: List()
+17/11/09 12:52:11 INFO DAGScheduler: Missing parents: List()
+17/11/09 12:52:11 INFO DAGScheduler: Submitting ResultStage 4 (MapPartitionsRDD[4] at saveAsTextFile at Source.scala:63), which has no missing parents
+17/11/09 12:52:11 INFO MemoryStore: ensureFreeSpace(111928) called with curMem=153529, maxMem=555755765
+17/11/09 12:52:11 INFO MemoryStore: Block broadcast_5 stored as values in memory (estimated size 109.3 KB, free 529.8 MB)
+17/11/09 12:52:11 INFO MemoryStore: ensureFreeSpace(37464) called with curMem=265457, maxMem=555755765
+17/11/09 12:52:11 INFO MemoryStore: Block broadcast_5_piece0 stored as bytes in memory (estimated size 36.6 KB, free 529.7 MB)
+17/11/09 12:52:11 INFO BlockManagerInfo: Added broadcast_5_piece0 in memory on localhost:36666 (size: 36.6 KB, free: 530.0 MB)
+17/11/09 12:52:11 INFO SparkContext: Created broadcast 5 from broadcast at DAGScheduler.scala:861
+17/11/09 12:52:11 INFO DAGScheduler: Submitting 2 missing tasks from ResultStage 4 (MapPartitionsRDD[4] at saveAsTextFile at Source.scala:63)
+17/11/09 12:52:11 INFO TaskSchedulerImpl: Adding task set 4.0 with 2 tasks
+17/11/09 12:52:11 INFO TaskSetManager: Starting task 0.0 in stage 4.0 (TID 8, localhost, PROCESS_LOCAL, 2266 bytes)
+17/11/09 12:52:11 INFO TaskSetManager: Starting task 1.0 in stage 4.0 (TID 9, localhost, PROCESS_LOCAL, 2266 bytes)
+17/11/09 12:52:11 INFO Executor: Running task 0.0 in stage 4.0 (TID 8)
+17/11/09 12:52:11 INFO Executor: Running task 1.0 in stage 4.0 (TID 9)
+17/11/09 12:52:11 INFO FileOutputCommitter: Saved output of task 'attempt_201711091252_0004_m_000000_8' to file:/home/pchannal/project4/output/_temporary/0/task_201711091252_0004_m_000000
+17/11/09 12:52:11 INFO SparkHadoopMapRedUtil: attempt_201711091252_0004_m_000000_8: Committed
+17/11/09 12:52:11 INFO Executor: Finished task 0.0 in stage 4.0 (TID 8). 915 bytes result sent to driver
+17/11/09 12:52:11 INFO TaskSetManager: Finished task 0.0 in stage 4.0 (TID 8) in 144 ms on localhost (1/2)
+17/11/09 12:52:11 INFO FileOutputCommitter: Saved output of task 'attempt_201711091252_0004_m_000001_9' to file:/home/pchannal/project4/output/_temporary/0/task_201711091252_0004_m_000001
+17/11/09 12:52:11 INFO SparkHadoopMapRedUtil: attempt_201711091252_0004_m_000001_9: Committed
+17/11/09 12:52:11 INFO Executor: Finished task 1.0 in stage 4.0 (TID 9). 915 bytes result sent to driver
+17/11/09 12:52:11 INFO TaskSetManager: Finished task 1.0 in stage 4.0 (TID 9) in 157 ms on localhost (2/2)
+17/11/09 12:52:11 INFO TaskSchedulerImpl: Removed TaskSet 4.0, whose tasks have all completed, from pool 
+17/11/09 12:52:11 INFO DAGScheduler: ResultStage 4 (saveAsTextFile at Source.scala:63) finished in 0.156 s
+17/11/09 12:52:11 INFO DAGScheduler: Job 4 finished: saveAsTextFile at Source.scala:63, took 0.262862 s
+17/11/09 12:52:11 INFO SparkUI: Stopped Spark web UI at http://198.202.114.48:4040
+17/11/09 12:52:11 INFO DAGScheduler: Stopping DAGScheduler
+17/11/09 12:52:11 INFO MapOutputTrackerMasterEndpoint: MapOutputTrackerMasterEndpoint stopped!
+17/11/09 12:52:11 INFO MemoryStore: MemoryStore cleared
+17/11/09 12:52:11 INFO BlockManager: BlockManager stopped
+17/11/09 12:52:11 INFO BlockManagerMaster: BlockManagerMaster stopped
+17/11/09 12:52:11 INFO SparkContext: Successfully stopped SparkContext
+17/11/09 12:52:11 INFO OutputCommitCoordinator$OutputCommitCoordinatorEndpoint: OutputCommitCoordinator stopped!
+17/11/09 12:52:11 INFO ShutdownHookManager: Shutdown hook called
+17/11/09 12:52:11 INFO ShutdownHookManager: Deleting directory /tmp/spark-02c09900-573d-4263-b7e9-6ed9702b77fc
