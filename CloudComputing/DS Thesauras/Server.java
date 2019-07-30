@@ -17,9 +17,7 @@ import javax.swing.JFrame;
 import javax.swing.JScrollPane;
 import javax.swing.JTextArea;
 
-/**
- * Name: Riten Jayantilal Vithalani
- * Student ID: 1001444167
+/*
  * 
  * References: 
  * 1. http://www.oracle.com/webfolder/technetwork/tutorials/obe/java/SocketProgramming/SocketProgram.html 
